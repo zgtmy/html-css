@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>伪元素选择器</title>
+  <style>
+    /* 选中元素的标签里面 创建 假标签 */
+    /* 伪元素选择器，作用创建虚拟元素（伪元素），用来摆放装饰性内容 */
+    /* 在选中的元素里面添加伪元素 */
+    /* 如果用before after 伪元素 content 一定要有 */
+    div::before {
+      content: "老鼠";
+      width: 100px;
+      height: 100px;
+      display: block;
+      background-color: brown;
+    }
+    /* 必须设置content属性， 没有content，伪元素选择器不生效 */
+    div::after {
+      content: "大米";
+      width: 100px;
+      height: 100px;
+      background-color: orange;
+      display: inline-block;
+    }
+  div {
+    width: 300px;
+    height: 300px;
+    background-color: pink;
+  }
+
+  </style>
+</head>
+<body>
+  <!-- 标签内容：老鼠爱大米 -->
+<div>爱</div>
+  
+</body>
+</html>
